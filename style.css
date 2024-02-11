@@ -1,0 +1,131 @@
+/* Define o estilo básico para o corpo do documento a raiz do HTML. */
+body, html {
+    margin: 0; /* Remove a margem padrão do navegador. */
+    padding: 0; /* Remove o preenchimento padrão do navegador. */
+    height: 100%; /* Garante que o html e body ocupem toda a altura da janela do navegador. */
+    overflow: hidden; /* Esconde qualquer coisa que ultrapasse a área da janela do navegador. */
+    font-family: 'Roboto', sans-serif; /* Fonte a ser utilizada no projeto. */
+}
+
+/* Estiliza o elemento pseudo após o corpo para adicionar uma imagem de fundo. */
+body::after {
+    content: ''; /* Necessário para que o pseudo-elemento seja gerado. */
+    position: absolute; /* Posiciona absolutamente para que possa ser dimensionado em relação ao seu elemento pai mais próximo. */
+    top: 0; /* Alinha o topo do pseudo-elemento com o topo do elemento pai. */
+    left: 0; /* Alinha o lado esquerdo do pseudo-elemento com o lado esquerdo do elemento pai. */
+    right: 0; /* Alinha o lado direito do pseudo-elemento com o lado direito do elemento pai. */
+    bottom: 0; /* Alinha a parte inferior do pseudo-elemento com a parte inferior do elemento pai. */
+    background-image: url('climaimg.webp'); /* Insere uma imagem de fundo. */
+    background-position: center center; /* Centraliza a imagem de fundo. */
+    background-repeat: no-repeat; /* Evita que a imagem de fundo se repita. */
+    background-size: cover; /* Certifica-se de que a imagem cubra todo o fundo. */
+    z-index: -1; /* Coloca a imagem de fundo atrás do conteúdo da página. */
+    backdrop-filter: blur(5px); /* Aplica um efeito de desfoque na imagem. */
+    opacity: 0.75; /* Define a transparência da imagem de fundo para dar suavidade. */
+}
+
+/* Título da página */
+#clima-title {
+    background: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente para destacar o title. */
+    display: block; /* Faz com que o container seja um bloco, ocupando a largura total disponível. */
+    width: fit-content; /* Faz com que a largura do containeer se ajuse ao seu conteúdo. */
+    margin: 20px auto; /* Margem superior e inferior, e centraliza horizontalmente.  */
+    padding: 20px; /* Preenchimento interno para distância do texto às bordas. */
+    border-radius: 10px; /* Bordas arredondadas para a caixa do título. */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidade. */
+    font-size: 2em; /* Tamanho maior para o texto do título. */
+    font-weight: bold; /* Texto em negrito para destaque. */
+
+}
+
+/* Formulário climatico */
+#weather-form {
+    text-align: center; /* Alinhando o texto ao centro  */
+    margin-bottom: 20px; /* Adcionando um espaço inferior ao  */
+}
+
+/* Campo de entrada de texto */
+input[type="text"] {
+    padding: 10px; /* Adicionando uma borda interna de 10px em todos os lados. */
+    width: calc(100% - 22px); /* Ajusta a largura para se adequar dentro do seu contêiner, considerando o padding. */
+    margin-bottom: 20px; /* Espaçamento abaixo do campo de entrada. */
+    border: 2px solid #007BFF; /* Define a cor da borda, combinando com o botão. */
+    border-radius: 5px; /* Bordas arredondadas para combinar com o botão. */
+    font-size: 1em; /* Tamanho de fonte adequado para fácil leitura. */
+    transition: border-color 0.3s ease; /* Suaviza a transição da cor da borda. */
+    width: 200px; /* Tamanho do input. */
+    text-align: center; /* Alinhando o texto ao centro. */
+}
+
+/* Estilização quando input estiver ativado */
+input[type="text"]:focus {
+    border-color: #0056b3; /* Muda a  cor da borda ao focar para indicar ativação. */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Adiciona uma sombra sutil para destacar o campo focado. */
+    outline: none; /* Remove o contorno padrão para evitar estilos duplicados de foco. */
+}
+
+/* Botão buscar */
+button {
+    padding: 10px 20px; /* Adciona preenchimento superior e inferior e o dobro aos lados. */
+    background-color: #007BFF; /* Cor de fundo azul. */
+    color: white; /* Cor da letra branca para contraste. */
+    border: none; /* Remove a borda padrão do botão. */
+    border-radius: 5px; /* Adiciona bordas arredondadas. */
+    font-size: 1em; /* Define um tamanho de fonte. */
+    font-weight: bold; /* Deixa o texto em negrito. */
+    cursor: pointer; /* O cursor vira um indicador quando passa o mouse sobre. */
+    transition: background-color 0.3s ease; /* Suaviza a transição de cor de fundo. */
+}
+
+/* Efeito quando o mouse está sobre o botão */
+button:hover {
+    background-color: #0056b3; /* Escurece a cor de fundo quando o mouse está sobre o botão. */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra sutil ao botão para efeito de elevação. */
+}
+
+/* Estilização do resultado */
+#weather-result {
+    display: none; /* Oculta o elemento por padrão. */
+    padding: 20px; /* Espaçamento interno para separar o contúdo das bordas. */
+    margin-top: 20px; /* Distância do elemento anterior. */
+    margin: 0 auto; /* Centraliza os itens ao centro adcionando uma margin igual em ambos os lados da horizontal.  */
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente para leveza visual. */
+    border-radius: 10px; /* Bordas arredondadas para suavidade. */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para profundidade. */
+    transition: all 0.3s ease; /* Transição suave pra animações. */
+    max-width: 300px; /* Largura máxima para manter o layout consistente. */
+    width: 100%; /* Ajusta a largura ao contêiner, mantendo responsividade. */
+    text-align: center; /* Alinhando o texto ao centro. */
+    box-sizing: border-box; /* Garante que o padding e border não aumentem a largura. */
+}
+
+/* Estilização do título no resultado */
+#weather-result h2 {
+    margin: 0; /* Removendo a margem do título. */
+    margin-bottom: 20px; /* Adicionando margem a parte inferior. */
+    color: #007BFF; /* Cor de destaque para o título (nome da cidade). */
+    font-size: 1.5rem; /* Tamanho da fonte aumentado para destaque. */
+}
+
+/* Estilização de texto no resultado */
+#weather-result p {
+    color: #333; /* Cor escura para texto, garantindo legibilidade. */
+    margin: 10px 0; /* Espaçamento vertical para separar parágrafos. */
+    font-size: 1rem; /* Tamanho padrão da fonte para texto. */
+}
+
+/* Estilização da imagem */
+#weather-result img {
+    filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.9)); /* Aplica uma sombra ao elemento. */
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+
+    /* Responsividade do resultado */
+    #weather-result {
+        padding: 15px; /* Reduz o preenchimento em telas menores. */
+        margin-top: 15px; /* Reduz a margem superior. */
+        max-width: 90%; /* Permite que o elemento ocupe mais espaço em telas pequenas. */
+    }
+}
