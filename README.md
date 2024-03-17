@@ -4,7 +4,7 @@
 
 Este projeto é uma aplicação web que permite aos usuários pesquisar e visualizar as condições climáticas atuais de qualquer cidade 🌍. Utilizando a API do OpenWeatherMap, ele exibe informações como temperatura 🌡, descrição do clima 🌬 e um ícone representativo ☀️.
 
-![Clima Hoje](https://via.placeholder.com/500x300?text=App+Clima+Hoje)
+![Clima Hoje](imagemSite.png)
 
 ## 🛠 Tecnologias Utilizadas
 
@@ -27,15 +27,22 @@ Este projeto é uma aplicação web que permite aos usuários pesquisar e visual
 
 ## 🔧 Instalação
 
-Clone este repositório e abra o arquivo `index.html` em seu navegador para começar a usar a aplicação.
+Para instalar e rodar o projeto localmente, clone o repositório usando o seguinte comando:
 
 ```bash
-git clone [URL_DO_REPOSITORIO]
+git clone https://github.com/italogax/Clima-Hoje.git
+```
+## 🤝 Contribuição
+
+Contribuições são sempre bem-vindas! Veja como contribuir:
+
+1. Faça o Fork do projeto (🍴).
+2. Crie uma Branch para sua Feature (`git checkout -b feature/AmazingFeature`).
+3. Adicione suas mudanças (`git add .`).
+4. Comite suas mudanças (`git commit -m 'Add some AmazingFeature'`).
+5. Faça o Push da Branch (`git push origin feature/AmazingFeature`).
+6. Abra um Pull Request.
 
 ## 🌐 Acesso ao Projeto
 
-Você pode acessar o site do projeto diretamente através deste link: [Clima Hoje ao Vivo](https://<username>.github.io/<repository-name>/)
-
----
-
-
+Você pode acessar o site do projeto diretamente através deste link: [Clima Hoje ao Vivo](https://italogax.github.io/Clima-Hoje/)
