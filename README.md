@@ -31,3 +31,11 @@ Clone este repositório e abra o arquivo `index.html` em seu navegador para come
 
 ```bash
 git clone [URL_DO_REPOSITORIO]
+
+## 🌐 Acesso ao Projeto
+
+Você pode acessar o site do projeto diretamente através deste link: [Clima Hoje ao Vivo](https://<username>.github.io/<repository-name>/)
+
+---
+
+
